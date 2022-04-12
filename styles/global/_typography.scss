@@ -1,0 +1,83 @@
+@font-face {
+  font-family: Primary;
+  font-weight: normal;
+  src: url('/fonts/Proxima-Nova-Regular.ttf');
+}
+
+@font-face {
+  font-family: Primary;
+  font-weight: bold;
+  src: url('/fonts/Cinzel-Regular.ttf');
+}
+
+html {
+  font-family: Primary;
+  color: color(light);
+}
+
+.display {
+  font-size: rem(75px);
+}
+
+h1, .h1 {
+  font-size: rem(42px);
+}
+
+h2, .h2 {
+  font-size: rem(35px);
+}
+
+h3, .h3 {
+  font-size: rem(24px);
+}
+
+h4, .h4 {
+  font-size: rem(22px);
+}
+
+h5, .h5 {
+  font-size: rem(18px);
+}
+
+p, .p {
+  font-size: rem(16px);
+  letter-spacing: 0.04em;
+  line-height: 1.6;
+}
+
+html {
+  font-size: 18px;
+  @include responsive(tabletPortrait) {
+    font-size: 16px;
+  }
+  @include responsive(mobile) {
+    font-size: 14px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  line-height: 1.3;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.no-br {
+  br {
+    display: contents;
+  }
+}
+
+a {
+  color: color(secondary);
+}
+
+.normal {
+  font-weight: normal;
+}
+

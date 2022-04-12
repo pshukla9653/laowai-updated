@@ -1,0 +1,47 @@
+import Link from 'next/link';
+import { useState } from 'react';
+
+const Header = () => {
+const [active, setActive] = useState(false);
+
+  const handleClick = () => {
+    setActive(!active);
+  };
+  return (
+    <>
+      <header className={'header'}>
+        <div className={'header-detail'}>
+          <img src={'/images/header-detail.png'} alt={'detail'}/>
+        </div>
+        <div className={'header-main'}>
+          <Link href={'/'}>
+            <a href={'/'}>
+              <img src={'/images/logo.png'} className={'header-logo'} alt={'Laowai'}/>
+            </a>
+          </Link>
+          <Link href={'/gallery'}>
+            <a href={'/gallery'} className={'bold'}>
+              Gallery
+            </a>
+          </Link>
+          <Link href={'/contact'}>
+            <a href={'/contact'} className={'bold'}>
+              Contact
+            </a>
+          </Link>
+          <Link href={'/blnd-tgr'}>
+            <a href={'/blnd-tgr'} className={'bold'}>
+              <img className={'header-blnd'} src={'/images/blnd-tgr.svg'} alt={'Blnd Tgr'}/>
+            </a>
+          </Link>
+        </div>
+      </header>
+      <div className='overlay-detail'>
+        <img src={'/images/header-detail.png'} alt={'detail'}/>
+      </div>
+    </>
+  )
+}
+
+
+export default Header

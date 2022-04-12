@@ -1,0 +1,149 @@
+.header {
+  position: fixed;
+  z-index: 1000;
+
+  &-detail {
+    position: absolute;
+    // z-index: -1;
+
+    img {
+      height: 225px;
+    }
+  }
+
+  &-main {
+    font-size: 20px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 60px;
+    justify-content: flex-start;
+    align-items: flex-end;
+    @include containerProperty(padding-left);
+    padding-top: 36px;
+  }
+
+  &-logo {
+    height: 60px;
+    margin-bottom: -20px;
+    padding-right: 24px;
+  }
+
+  &-blnd {
+    height: 15px;
+  }
+}
+
+.plate {
+  display: inline-block;
+  position: relative;
+
+  &-main {
+    @include responsive(mobile) {
+      width: 80vw;
+      
+    }
+  }
+
+  &-overlay {
+    position: absolute;
+    @include inset(17%);
+    z-index: 10;
+    width: 66%;
+    height: 66%;
+    mask-image: radial-gradient(ellipse, black 40%, transparent 90%);
+    object-fit: cover;
+  }
+}
+
+
+.blindTigerRecipe {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+@include responsive(mobile) {
+     font-size: 16px;
+      
+    }
+  }
+
+  &-bottom {
+    font-size: 16px;
+  }
+}
+
+// THIS CODE BY DEEPAK
+a.display.bold.homePage-menu {
+    position: absolute;
+    bottom: 10%;
+    right: 18%;
+    z-index: 9999999;
+    @include responsive(mobile) {
+     bottom: 7%;
+     right: 45%;
+      
+    }
+}
+
+.mob-outer {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+    .header {
+      width: 100%;
+    }
+    .header-main {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        margin-right: 0px;
+        gap: 26px;
+        width: calc(100% - 10px) !important;
+
+    }
+    .hidemenu {
+      display: none !important;
+	  background-color: rgba(60, 60, 60, 0.5);
+    }
+    .hiddens{
+       display: flex !important;
+    }
+    .hiddens a:first-child {
+        display: none;
+    }
+    .mob-toggler {
+        display: inline-flex;
+        flex-direction: column;
+        grid-gap: 5px;
+        gap: 5px;
+        z-index: 9999999;
+        cursor: pointer;
+
+
+      span {
+        height: 4px;
+        overflow: hidden;
+        background: white;
+        width: 29px;
+        display: block;
+    }
+    
+  }
+  .mob-outer {
+      display: flex;
+        justify-content: space-between;
+        padding: 29px 29px 0px;
+    }
+}
+
+//.galleryPage .plate {
+ //   margin-left: 19px;
+
+//}
+
+

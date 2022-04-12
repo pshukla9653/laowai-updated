@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  background: color(primary);
+  overflow-x: hidden;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overlay-detail {
+  position: fixed;
+  transform: rotate(180deg);
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+
+  img {
+    width: 138px;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}

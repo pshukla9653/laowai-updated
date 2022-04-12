@@ -1,0 +1,66 @@
+.button {
+  display: inline-block;
+  background: color(secondary);
+  padding: rem(16px) rem(24px);
+  font-weight: bold;
+  text-transform: uppercase;
+  color: color(light);
+  text-decoration: none;
+  min-width: rem(180px);
+  text-align: center;
+  font-size: rem(20px);
+
+  @include hover {
+    background: scale-color(color(secondary), $lightness: -40%);
+  }
+
+  &-small {
+    padding: rem(12px) rem(24px);
+    font-size: rem(16px);
+  }
+
+  &-medium {
+    padding: rem(12px) rem(24px);
+    font-size: rem(18px);
+  }
+
+  &-seamless {
+    color: color(secondary);
+    border: none;
+    background: none;
+    padding: 0 !important;
+    min-width: 0;
+
+    @include hover {
+      background: none;
+    }
+  }
+
+  &-secondary {
+    border: 1px solid color(secondary);
+    color: color(light);
+    background: transparent;
+
+    @include hover {
+      background: rgba(color(light), 0.2);
+    }
+  }
+
+  &-shadow {
+    box-shadow: 0 0 50px rgba(color(secondary), 0.6);
+
+    @include hover {
+      background: color(secondary);
+      box-shadow: 0 0 50px rgba(color(secondary), 0.75);
+    }
+  }
+
+  &-send {
+    color: color(primary);
+    background: color(light);
+    font-size: rem(18px);
+    &:hover {
+      background: scale-color(color(light), $lightness: -20%);
+    }
+  }
+}
